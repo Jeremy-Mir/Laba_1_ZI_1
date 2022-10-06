@@ -6,7 +6,7 @@ w = [["й","ц"],["у","к"],["е","н"],["г","ш"],["щ","з"],["х","ъ"]]
 h = [["ф","ы"],["в","а"],["п","р"],["о","л"],["д","ж"],["э","я"]]
 alf = "абвгдеёжзийклмнопрстуфхцчшщъыьэюябю.!,? "
 mass = []
-print(len(new))
+
 n = 0
 
 for i in range(6):
@@ -33,7 +33,7 @@ for n in f_new.read() :
             a = a + 1
 
             if j == n:
-                print(i.index(j),mass.index(i))
+               # print(i.index(j),mass.index(i))
                 if randint(0, 1) ==0:
 
                     new = new + w[i.index(j)][randint(0, 1)] + h[mass.index(i)][randint(0, 1)] + " "
