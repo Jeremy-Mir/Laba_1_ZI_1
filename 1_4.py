@@ -1,4 +1,4 @@
-f_new = open('text.txt', 'r',encoding='utf-8')
+f_new = open('text.txt', 'r',encoding='windows-1251')
 new = f_new.read()
 n = 0
 m = 31
@@ -14,13 +14,13 @@ okey.reverse()
 print("Open key = " )
 print(okey)
 
-print(ord("©".encode('windows-1251')))
-print(format(ord("т".encode('windows-1251')), 'b')[::-1])
-f_sif = open('text1.txt', 'w', encoding='windows-1251')
+
+f_sif = open('binar.bin', 'wb')
 for s in new:
     bin = format(ord(s.encode('windows-1251')), 'b')[::-1]
     summ = 0
     n= 0
+    print(bin)
     for b in bin:
 
         if b == '1':
@@ -30,7 +30,7 @@ for s in new:
 
 
 
-    f_sif.write(str(summ))
-    f_sif.write(" ")
-f_new.close()
+    f_sif.write(summ.to_bytes(4,byteorder='big'))
 
+f_new.close()
+#
