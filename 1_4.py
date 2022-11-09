@@ -15,7 +15,7 @@ print("Open key = " )
 print(okey)
 
 
-f_sif = open('binar.bin', 'wb')
+f_sif = open('new.bin', 'wb')
 for s in new:
     bin = format(ord(s.encode('windows-1251')), 'b')[::-1]
     summ = 0
