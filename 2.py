@@ -14,7 +14,7 @@ for l in k:
 h_b  = byt[:4]
 l_b  = byt[-4:]
 print("   ")
-
+X = bytearray()
 for n in range(0,4):
     print(byt[n])
   #  print(byt[n].to_bytes(1, byteorder="big"))
@@ -22,10 +22,10 @@ for n in range(0,4):
 
 
 
-    k[0][n] = byt[n] | k[0][n]
+    X.append(byt[n] | k[0][n])
 print("   ")
 
-for l in k:
+for l in X:
 
     print((l))
 f_new.close()
